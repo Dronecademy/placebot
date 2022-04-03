@@ -15,7 +15,7 @@ offset_y = int(sys.argv[3])
 
 image_filename = sys.argv[1]
 print("Reading image: " + image_filename)
-image = Image.open(image_filename)
+image = Image.open(image_filename).convert("RGBA")
 image_data = image.load()
 
 print("Converting image...")
